@@ -10,13 +10,26 @@
     <body>
         
         <h1>he is very fluffy</h1>
-        <h2></h2>
-        he is the cutest in the world!
-        <p>oo
+        <h2>he is the cutest in the world!</h2>
+        
+        <p>
             this is mocha! he is cute
-            
-        </p>say hi to Mocha!
+            type
+         hi to Mocha!    
+        </p>
         
+        <input type="text" placeholder="type hi then press enter" onchange="playSound(this, 'bark.mp3')">
         
+        <script >
+          function playSound(el,soundfile) {
+              if (el.mp3) {
+                  if(el.mp3.paused) el.mp3.play();
+                  else el.mp3.pause();
+              } else {
+                  el.mp3 = new Audio(soundfile);
+                  el.mp3.play();
+              }
+          }
+        </script>
     </body>
 </html>
